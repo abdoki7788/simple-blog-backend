@@ -9,5 +9,8 @@ class Article(models.Model):
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
 
+	def get_date(self):
+		return f"{self.updated.year}-{self.updated.month}-{self.updated.day}"
+
 	def __str__(self):
 		return self.title

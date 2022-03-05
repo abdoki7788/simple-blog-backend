@@ -8,7 +8,7 @@ User = get_user_model()
 class ArticleSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Article
-		fields = ['title', 'slug', 'content']
+		fields = ['title', 'slug', 'content', 'get_date']
 
 
 class CurrentUserSerializer(serializers.ModelSerializer):
